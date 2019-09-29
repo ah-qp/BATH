@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		body{height:1000px;margin: 0px; margin: auto;text-align: center;}
+		#mybody{background-image: url(sea.jpg);background-size: 100%;}
+		
+		#box{background-image: url(bubble.gif);background-size: 80%;}
+		#box2{background-image: url(bubble2.gif);background-size: 10%;}
+
+		#fish{display: block;position: absolute;top: 300px;z-index: 2}
+		#fish2{display: block;position: absolute;top: 500px;z-index: 2;
+			right:400px;animation: f2 10s infinite alternate}
+			@keyframes f2{
+				from{right: 400px;top: 500px;width: 200px;}
+				to{top: 900px;width: 100px;right: 900px;}
+			}
+
+		#jelfish{width:100px;display: block;position: absolute;right: 400px; z-index: 2;top: 600px;}
+		
+		#anemone{width: 300px; display: block;position: absolute; left: 0px;top: 890px;opacity: 0.5;}
+		#anemone3{width: 400px; display: block;position: absolute; top: 780px;left: 1100px;opacity: 0.5;}
+		
+		#fish3{display: block;position: absolute;top: 10px; right:700px; width: 150px;z-index: 2;}
+		#fishes{display: block;position: absolute;right: 150px;top: 150px; opacity: 0.8; animation: f3 15s infinite alternate}
+			@keyframes f3{
+				from{right: 150px;top: 150px;width: 500px;}
+				to{top: 400px;width: 300px;right: 900px;opacity: 0.5;}
+			}
+		#fish6{width: 200px; display: block;position: absolute; top: 400px;right: 500px;z-index: 10;}
+			
+
+		#bath{opacity: 0}
+		#radio{width: 200px;display: block;position: absolute; top: 650px;left: 100px;opacity: 0;}
+		#duck{width: 100px; display: block;position: absolute; top: 400px;left: 600px;opacity: 0;animation: d 3s infinite alternate}
+			@keyframes d{
+				from{left: 600px;}
+				to{left: 550px;}
+			}
+		#fish4{width: 100px; display: block;position: absolute; top: 400px;right: 600px;opacity: 0;animation: f4 3s infinite alternate}
+			@keyframes f4{
+				from{right: 600px; top: 400px;}
+				to{right: 620px; top: 430px;}
+			}
+		#fish5{width: 50px; display: block;position: absolute; top: 400px;right: 500px;opacity: 0;animation: f5 2s infinite alternate}
+			@keyframes f5{
+				from{top: 400px;}
+				to{top: 430px;}
+			}
+		#girl{opacity: 0;display: block;position: absolute; top: 500px;right: -100px;}
+			
+		.thum{height: 150px; opacity: 0.5; display: block; float:left;}
+		.thum:hover{ opacity: 1; } 
+		}
+
+	</style>
+</head>
+<body id="mybody">
+
+<section id="box2">
+	<section id="box">
+		
+		<section id="inbox">
+		
+			<img src="fish.gif" id="fish">
+			<img src="fish2.gif" id="fish2">
+		
+			<img src="jellyfish.gif" id="jelfish">
+			<img src="jellyfish.gif" id="jelfish" 
+				style="right: 200px;width: 300px;">
+			<img src="jellyfish.gif" id="jelfish" 
+				style="right: 500px;width: 150px;top: 700px;">
+			
+			<img src="fish3.gif" id="fish3" class="thum">
+			<audio src="beach.mp3" loop id="bb"></audio>
+			
+			<img src="fish3.gif" id="fish3" 
+				style="width: 80px; top: 150px; left: 500px;">
+
+			<img src="sea anemone2.png" id="anemone" 
+				style="width: 200px;top: 890px;left: 200px;"opacity: 0.4;>
+			<img src="sea anemone.png" id="anemone">
+			<img src="sea anemone3.png" id="anemone3">
+			<img src="fishes.png" id="fishes">
+
+			<img src="fish6.gif" id="fish6">
+		</section>
+	
+		<img src="Bathtub.png" id="bath">
+		
+		<img src="duck.png" id="duck" class="thum">
+		<audio src="duck.mp3" loop id="dd"></audio>
+		
+		<img src="fish4.png" id="fish4">
+		<img src="fish5.png" id="fish5">
+		
+		<img src="radio.gif" id="radio" class="thum">
+		<audio src="good.mp3" loop id="rr"></audio>
+
+		<img src="girl.gif" id="girl">
+	
+	</section>
+</section>
+
+		<script type="text/javascript">
+				fish6.onclick = function(){
+				mybody.style.background = "url('tile.jpg')"
+				inbox.style.opacity = "0"
+				bath.style.opacity = "1"
+				duck.style.opacity = "1"
+				fish4.style.opacity = "1"
+				fish5.style.opacity = "1"
+				radio.style.opacity = "1"
+				girl.style.opacity = "1"
+				box.style.background = "none"
+				box2.style.background = "none"
+
+			}
+
+				var radiostate = "off";
+				radio.onclick = function(){
+				if (radiostate == "off") {	
+				radio.style.opacity = "1"
+				rr.play();
+				radiostate = "on";
+				}else{
+				radio.style.opacity = "0.5"
+				rr.pause();
+				radiostate = "off";
+				}
+			}
+
+				var duckstate = "off";
+				duck.onclick = function(){
+				if (duckstate == "off") {	
+				duck.style.opacity = "1"
+				dd.play();
+				duckstate = "on";
+				}else{
+				duck.style.opacity = "0.5"
+				dd.pause();
+				duckstate = "off";
+				}
+			}
+
+				var fish3state = "off";
+				fish3.onclick = function(){
+				if (fish3state == "off") {	
+				fish3.style.opacity = "1"
+				bb.play();
+				fish3state = "on";
+				}else{
+				fish3.style.opacity = "0.5"
+				bb.pause();
+				fish3state = "off";
+				}
+			}
+		</script>
+		
+</body>
+
+</html>
+
+	
